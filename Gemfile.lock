@@ -160,8 +160,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-<<<<<<< Updated upstream
-=======
     regexp_parser (1.6.0)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -187,7 +185,6 @@ GEM
       ffi (~> 1.9)
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
->>>>>>> Stashed changes
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -241,14 +238,11 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails (~> 4.2)
-<<<<<<< Updated upstream
-=======
   devise
   factory_bot_rails
   faker
   font-awesome-sass
   haml-rails
->>>>>>> Stashed changes
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
