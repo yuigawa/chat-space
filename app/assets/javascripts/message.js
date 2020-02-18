@@ -1,4 +1,5 @@
 $(function(){ 
+<<<<<<< Updated upstream
   var buildHTML = function(message) {
     if (message.content && message.image) {
       //data-idが反映されるようにしている
@@ -53,6 +54,48 @@ $(function(){
     };
     return html;
   };
+=======
+  function buildHTML(message){
+   if ( message.image ) {
+     var html =
+      `<div class="message" data-message-id=${message.id}>
+         <div class="upper-message">
+           <div class="upper-message__user-name">
+             ${message.user_name}
+           </div>
+           <div class="upper-message__date">
+             ${message.created_at}
+           </div>
+         </div>
+         <div class="lower-message">
+           <p class="lower-message__content">
+             ${message.content}
+           </p>
+         </div>
+         <img src=${message.image} >
+       </div>`
+    return html;
+  } else {
+    var html =
+     `<div class="message" data-message-id=${message.id}>
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="lower-message">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+        </div>
+      </div>`
+    return html;
+  };
+}    
+>>>>>>> Stashed changes
 
   //非同期通信
   $('#new_message').on('submit', function(e){
@@ -81,6 +124,7 @@ $(function(){
     })
     return false;
   })
+<<<<<<< Updated upstream
 
   var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
@@ -114,4 +158,31 @@ $(function(){
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
     setInterval(reloadMessages, 2000);
   }
+=======
+  // 自動更新
+    // var interval = setInterval(function() {
+    //   if (location.href.match(/\/groups\/\d+\/messages/)){
+    //     var message_id = $('.main-contents__body__list__message').last().data('messege-id');
+    //     $.ajax({
+    //       url: location.href,
+    //       type: "GET",
+    //       data: {id: message_id},
+    //       dataType: "json"
+    //     })
+    //     .done(function(data) {
+    //       data.forEach(function(message) {
+    //         var html = buildHTML(message);
+    //         $('.messages').append(html);
+    //         $(".messages").animate({scrollTop:$('.messages')[0].scrollHeight});
+    //         $('.new_message .message').val('');
+    //       })
+    //     })
+    //     .fail(function() {
+    //       alert('自動更新に失敗しました');
+    //     });
+    //   } else {
+    //       clearInterval(interval);
+    //     }
+    // } , 5000 );
+>>>>>>> Stashed changes
 });
