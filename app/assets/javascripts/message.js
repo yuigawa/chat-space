@@ -53,7 +53,7 @@ $(function(){
     };
     return html;
   };
-
+  
   //非同期通信
   $('#new_message').on('submit', function(e){
     e.preventDefault();
