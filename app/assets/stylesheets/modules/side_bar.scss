@@ -3,6 +3,8 @@
   color: $white;
   height: 100vh;
   width: 300px;
+  border: none;
+ 
   .header {
     background-color: $side_blue_dark;
     height: 100px;
@@ -31,6 +33,9 @@
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
     padding: 0 20px;
+    box-sizing: border-box;
+    width: 300px;
+    overflow: scroll;
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
